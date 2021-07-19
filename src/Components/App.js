@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 import youtube from "../api/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
+import Footer from "./Footer";
 
 class App extends React.Component{
     state = {videos: [], selectedVideo: null};
@@ -10,7 +11,7 @@ class App extends React.Component{
     // This default func will be call when first render!!
     // we can set default search when we first render our APP.js
     componentDidMount(){
-        this.onTermSubmit("css");
+        this.onTermSubmit("NBA");
     }
 
     onTermSubmit = async (term) => {
@@ -45,6 +46,7 @@ class App extends React.Component{
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }
